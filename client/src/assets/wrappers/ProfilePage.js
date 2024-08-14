@@ -74,8 +74,9 @@ const Wrapper = styled.div`
     padding: 50px 10px;
     height: 130vh;
     .logout-button {
-      width: 16%;
+      width: 22%;
       right: 20px;
+      border-radius: 5px;
     }
     .form-center {
       padding: 20px 10px;

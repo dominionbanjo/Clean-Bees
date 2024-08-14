@@ -13,17 +13,35 @@ const PopScreen = () => {
   return (
     <AnimatedPage>
       <Wrapper className={showSidebar ? "" : "hidden"}>
-        <div
-          onClick={() => {
-            toggleSidebar();
-            navigate("profile");
-          }}
-          className="profile"
-        >
+        <div className="profile">
           <div className="header">
-            <FaUserCircle />
-            {<p style={{ fontSize: "22px" }}>{user?.firstName}</p> || (
+            {user.avatar ? (
+              <img
+                style={{
+                  width: "25px",
+                  height: "25px",
+                  borderRadius: "50%",
+                  marginRight: "8px",
+                }}
+                src={user.avatar}
+                alt="avatar"
+                className="img"
+              />
+            ) : (
+              <FaUserCircle />
+            )}
+            {user?.firstName === "Pizza" ? (
               <NavLink to="/login">Log In</NavLink>
+            ) : (
+              <p
+                onClick={() => {
+                  toggleSidebar();
+                  navigate("profile");
+                }}
+                style={{ fontSize: "20px" }}
+              >
+                {user?.firstName}
+              </p>
             )}
           </div>
           <IoCloseSharp onClick={toggleSidebar} />

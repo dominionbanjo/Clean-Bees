@@ -93,7 +93,7 @@ const Wrapper = styled.section`
     display: block;
     height: 50px;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.07);
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 3px;
     padding: 0 10px;
     margin-top: 8px;
@@ -140,10 +140,37 @@ const Wrapper = styled.section`
   .active-anchor {
     color: #deff4f;
   }
+
+  .icon-container {
+    position: absolute; /* Changed to fixed to keep it at the top left of the viewport */
+    top: 0px;
+    left: 10px;
+    z-index: 100; /* Increased z-index to ensure it appears above other elements */
+  }
+
+  .back-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .back-icon:hover {
+    transform: scale(1.1);
+  }
   @media screen and (max-width: 576px) {
+    .icon-container {
+      position: absolute;
+      top: -2%;
+      left: 30px;
+      z-index: 10;
+    }
     form {
       height: 90%;
-      /* width: 400px; */
+      width: 330px;
       background-color: rgba(255, 255, 255, 0.13);
       /* position: absolute; */
       transform: translate(-50%, -50%);

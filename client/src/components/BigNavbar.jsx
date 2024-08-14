@@ -18,7 +18,21 @@ const BigNavbar = () => {
 
       <nav>
         <div className="profile">
-          <FaUserCircle />
+          {user.avatar ? (
+            <img
+              style={{
+                width: "25px",
+                height: "25px",
+                borderRadius: "50%",
+                marginRight: "8px",
+              }}
+              src={user.avatar}
+              alt="avatar"
+              className="img"
+            />
+          ) : (
+            <FaUserCircle />
+          )}
           {user?.firstName === "Pizza" ? (
             <NavLink to="/login">Log In</NavLink>
           ) : (

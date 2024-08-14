@@ -4,13 +4,14 @@ const Wrapper = styled.header`
   @media (min-width: 700px) {
     display: none;
   }
+  border: 2;
   z-index: 7;
   background-color: #0f93fe;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 20px 18px;
   color: white;
   height: 75px;
   /* position: fixed; */
