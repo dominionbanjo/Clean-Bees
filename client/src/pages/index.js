@@ -1,0 +1,12 @@
+export { default as Landing } from "./Landing";
+export { default as About } from "./About";
+export { default as HomepageLayout } from "./HomepageLayout";
+export { default as Faq } from "./Faq";
+export { default as Login } from "./Login";
+export { default as Register } from "./Register";
+export { default as Services } from "./Services";
+export { default as Pricing } from "./Pricing";
+export { default as Error } from "./Error";
+export { default as HomeLayout } from "./HomeLayout";
+export { default as Home } from "./Home";
+export { default as Profile } from "./Profile";
