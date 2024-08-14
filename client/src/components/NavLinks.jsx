@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import links from "../utils/links";
+import links from "../utils/Links";
 import { useHomepageContext } from "../pages/HomepageLayout";
 
 const NavLinks = ({ smallScreen }) => {
