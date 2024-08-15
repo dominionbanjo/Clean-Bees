@@ -145,7 +145,7 @@ const Wrapper = styled.section`
 
   .testimonial {
     /* background-color: #0f93fe; */
-    width: 60%;
+    width: 100%;
     color: #0f93fe;
     /* transition: opacity 0.3s ease; */
     /* display: flex;
