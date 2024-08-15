@@ -1,5 +1,11 @@
 import React from "react";
-import { Form, Link, redirect, useNavigate } from "react-router-dom";
+import {
+  Form,
+  Link,
+  redirect,
+  useNavigate,
+  useNavigation,
+} from "react-router-dom";
 import Wrapper from "../assets/wrappers/LoginAndRegister";
 import { FormRow } from "../components";
 import { FaGoogle } from "react-icons/fa6";
@@ -24,6 +30,8 @@ export const action = async ({ request }) => {
 
 const Register = () => {
   const navigate = useNavigate();
+  const navigation = useNavigation();
+  const isSubmitting = navigation.state === "submitting";
   return (
     <Wrapper>
       <div className="background">
@@ -63,8 +71,13 @@ const Register = () => {
         <FormRow type="text" name="location" defaultValue="" />
         <FormRow type="email" name="email" defaultValue="" />
         <FormRow type="password" name="password" defaultValue="" />
-        <button className="submit-btn" type="submit" id="btn">
-          Register
+        <button
+          className="submit-btn"
+          type="submit"
+          id="btn"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? "Loading" : "Register"}
         </button>
         <p>
           Already a member?{" "}

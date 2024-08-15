@@ -33,7 +33,7 @@ export const action =
 
 const Login = () => {
   const navigation = useNavigation();
-  const isSubmitting = navigation.state === "submitting"; // Correct comparison
+  const isSubmitting = navigation.state === "submitting";
   const navigate = useNavigate();
 
   return (
