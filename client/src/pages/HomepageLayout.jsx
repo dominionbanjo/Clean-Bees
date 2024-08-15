@@ -47,8 +47,8 @@ const HomepageLayout = ({ queryClient }) => {
   };
 
   const logoutUser = async () => {
-    if (hasLoggedOut) return; // Prevent multiple logout attempts
-    setHasLoggedOut(true); // Set the flag
+    if (hasLoggedOut) return;
+    setHasLoggedOut(true);
     await customFetch.get("/auth/logout");
     queryClient.clear();
     toast.success("Logout successful");

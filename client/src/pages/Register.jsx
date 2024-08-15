@@ -1,10 +1,26 @@
 import React from "react";
-import { Form, Link, useNavigate } from "react-router-dom";
+import { Form, Link, redirect, useNavigate } from "react-router-dom";
 import Wrapper from "../assets/wrappers/LoginAndRegister";
 import { FormRow } from "../components";
 import { FaGoogle } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 import { IoChevronBackCircleOutline } from "react-icons/io5"; // Import the icon
+import customFetch from "../utils/customFetch";
+import { toast } from "react-toastify";
+
+export const action = async ({ request }) => {
+  const formData = await request.formData();
+  const data = Object.fromEntries(formData);
+
+  try {
+    await customFetch.post("auth/register", data);
+    toast.success("Registration Successful");
+    return redirect("/login");
+  } catch (error) {
+    toast.error(error?.response?.data?.msg);
+    return error;
+  }
+};
 
 const Register = () => {
   const navigate = useNavigate();
