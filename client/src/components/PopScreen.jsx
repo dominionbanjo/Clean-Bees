@@ -28,7 +28,7 @@ const PopScreen = () => {
                 className="img"
               />
             ) : (
-              <FaUserCircle />
+              <FaUserCircle style={{ marginRight: "8px" }} />
             )}
             {user?.firstName === "Pizza" ? (
               <NavLink to="/login">Log In</NavLink>
