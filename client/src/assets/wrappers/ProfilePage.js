@@ -70,7 +70,7 @@ const Wrapper = styled.div`
     top: 100px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 576px) {
     padding: 50px 10px;
     height: 130vh;
     .logout-button {
