@@ -57,13 +57,13 @@ const Wrapper = styled.footer`
     width: 40%;
   }
   .logos {
-    /* background-color: black; */
-    /* margin: 0 20px 20px 20px; */
     width: 30%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding-top: 40px;
+  }
+  img {
+    margin-right: 10px;
   }
 
   @media screen and (max-width: 576px) {
@@ -120,13 +120,10 @@ const Wrapper = styled.footer`
     }
 
     .logos {
-      /* background-color: black; */
-      /* margin: 0 20px 20px 20px; */
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0 150px;
       padding-top: 40px;
     }
   }
