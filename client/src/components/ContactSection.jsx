@@ -25,7 +25,7 @@ const ContactSection = () => {
             id="message"
             placeholder="Message"
           />
-          <button type="submit">Submit</button>
+          <button type="button">Submit</button>
         </div>
       </Form>
     </div>
