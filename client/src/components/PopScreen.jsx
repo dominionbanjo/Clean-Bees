@@ -21,17 +21,19 @@ const PopScreen = () => {
                   width: "25px",
                   height: "25px",
                   borderRadius: "50%",
-                  marginRight: "8px",
+                  marginRight: "18px",
                 }}
                 src={user.avatar}
                 alt="avatar"
                 className="img"
               />
             ) : (
-              <FaUserCircle style={{ marginRight: "8px" }} />
+              <FaUserCircle style={{ marginRight: "18px" }} />
             )}
             {user?.firstName === "Pizza" ? (
-              <NavLink to="/login">Log In</NavLink>
+              <NavLink className="login-a" to="/login">
+                Log In
+              </NavLink>
             ) : (
               <p
                 onClick={() => {

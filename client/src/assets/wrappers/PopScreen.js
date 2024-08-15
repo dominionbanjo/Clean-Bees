@@ -20,6 +20,10 @@ const Wrapper = styled.nav`
     font-size: 26px;
     color: white;
   }
+
+  .login-a {
+    font-size: 22px;
+  }
   ul {
     list-style: none;
   }
@@ -33,8 +37,9 @@ const Wrapper = styled.nav`
   .profile {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 90%;
     align-items: center;
+    padding: 0 20px;
   }
   ul {
     width: 70%;
@@ -44,10 +49,10 @@ const Wrapper = styled.nav`
     margin-top: 30px;
   }
   .header {
-    width: 45%;
+    width: 70%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
   svg {
     font-size: 30px;
